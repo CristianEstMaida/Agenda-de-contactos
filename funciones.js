@@ -1,6 +1,6 @@
 const guardarContacto = (db, contacto) =>{
     db.setItem(contacto.id, JSON.stringify(contacto))
-    window.location.href = '/'
+    window.location.href = '/Agenda-de-contactos/'
 }
 
 const cargarContactos = (db, parentNode) =>{
@@ -30,7 +30,7 @@ const crearContacto = (parentNode, contacto, db) =>{
 
     iconoBorrar.onclick = () =>{
         db.removeItem(contacto.id)
-        window.location.href = '/'
+        window.location.href = '/Agenda-de-contactos/'
     }
 
     divContacto.appendChild(nombreContacto)
