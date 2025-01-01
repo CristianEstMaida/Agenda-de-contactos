@@ -52,8 +52,8 @@ body{
 }
 
 .formulario-datos button{
-    margin: 1rem 0 rem;
-    background-color: 1px solid dodgerblue;
+    margin: 1rem 0rem;
+    background-color: dodgerblue;
     border: 0;
     outline: 0;
     height: 3rem;
