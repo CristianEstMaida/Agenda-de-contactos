@@ -20,9 +20,27 @@ const crearContacto = (parentNode, contacto, db) =>{
     let direccionContacto = document.createElement('p')
     let iconoBorrar = document.createElement('span')
 
-    nombreContacto.innerHTML = contacto.nombre
-    numeroContacto.innerHTML = contacto.numero
-    direccionContacto.innerHTML = contacto.direccion
+    if (contacto.nombre) {
+        nombreContacto.innerHTML = contacto.nombre
+    }
+    else{
+        nombreContacto.innerHTML = ""
+    }
+    
+    if (contacto.numero) {
+        numeroContacto.innerHTML = contacto.numero
+    }
+    else{
+        numeroContacto.innerHTML = ""
+    }
+
+    if (contacto.direccion) {
+        direccionContacto.innerHTML = contacto.direccion
+    }
+    else{
+        direccionContacto.innerHTML = ""
+    }
+    
     iconoBorrar.innerHTML = 'delete_forever'
 
     divContacto.classList.add('tarea')
