@@ -19,6 +19,7 @@ const crearContacto = (parentNode, contacto, db) =>{
     let numeroContacto = document.createElement('p')
     let direccionContacto = document.createElement('p')
     let iconoBorrar = document.createElement('span')
+    let iconoEditar = document.createElement('span')
 
     if (contacto.nombre) {
         nombreContacto.innerHTML = contacto.nombre
@@ -42,13 +43,25 @@ const crearContacto = (parentNode, contacto, db) =>{
     }
     
     iconoBorrar.innerHTML = 'delete_forever'
+    iconoEditar.innerHTML = 'edit'
 
     divContacto.classList.add('tarea')
     iconoBorrar.classList.add('material-icons', 'icono')
+    iconoEditar.classList.add('material-icons', 'icono')
 
     iconoBorrar.onclick = () =>{
         db.removeItem(contacto.id)
         window.location.href = 'https://cristianestmaida.github.io/Agenda-de-contactos/'
+    }
+
+    iconoEditar.onclick = () =>{
+        const nombre = document.querySelector('.nombre');
+        const numero = document.querySelector('.numero');
+        const direccion = document.querySelector('.direccion');
+        
+        nombre.value = contacto.nombre;
+        numero.value = contacto.numero;
+        direccion.value = contacto.direccion;
     }
 
     divContacto.appendChild(nombreContacto)
