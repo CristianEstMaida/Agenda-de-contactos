@@ -68,6 +68,7 @@ const crearContacto = (parentNode, contacto, db) =>{
     divContacto.appendChild(numeroContacto)
     divContacto.appendChild(direccionContacto)
     divContacto.appendChild(iconoBorrar)
+    divContacto.appendChild(iconoEditar)
 
     parentNode.appendChild(divContacto)
 }
